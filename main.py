@@ -226,9 +226,8 @@ if __name__ == "__main__":
     # 传入地区获取天气信息
     region = config["region"]
     weather, temp, wind_dir = get_weather(region)
-    note_ch = config["note_ch"]
-    note_en = config["note_en"]
-    if note_ch == "" and note_en == "":
+    day_love=config["day_love"]
+    if day_love == get_daily_love():
         # 获取词霸每日金句
         note_ch, note_en = get_ciba()
     # 公众号推送消息
